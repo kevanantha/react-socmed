@@ -1,16 +1,14 @@
-import { ActionType } from 'redux-promise-middleware'
-
 const initState = {
   users: [],
   isLoading: false
 };
 
 const usersReducer = (state = initState, action) => {
-  if (action.type === `USER/LOAD_ALL_${ActionType.Pending}`) {
+  if (action.type === "USER/LOAD_ALL_PENDING") {
     return { ...state, isLoading: true };
   }
 
-  if (action.type === `USER/LOAD_ALL_${ActionType.Fulfilled}`) {
+  if (action.type === "USER/LOAD_ALL_FULFILLED") {
     const { payload: users } = action;
     return { ...state, isLoading: false, users };
   }
