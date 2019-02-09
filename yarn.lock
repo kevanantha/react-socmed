@@ -8361,10 +8361,10 @@ redux-form@^8.1.0:
     react-is "^16.7.0"
     react-lifecycles-compat "^3.0.4"
 
-redux-promise-middleware@^5.0.0:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/redux-promise-middleware/-/redux-promise-middleware-5.1.1.tgz#37689339a58a33d1fda675ed1ba2053a2d196b8d"
-  integrity sha512-YC1tiheU28Hgmtu5HHMLiuveLgjL1aCJWsSnwquMiZBcj5i/J9qVLt6vgOnb0Gz37y4deJ/rjiNt7l6Dh+Z8lA==
+redux-promise-middleware@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/redux-promise-middleware/-/redux-promise-middleware-6.0.1.tgz#122483f55fd20622155c7fb2116a764bac17a2d3"
+  integrity sha512-YcUOyZNTzSYocj3Gs8yhuV0u9wAZc3xxkEo42Ch0t5oiEW+KWf6UlknzswLH9uYFtUVz5NJHn2D72Y3WWKaoZA==
 
 redux-thunk@^2.3.0:
   version "2.3.0"

@@ -3,6 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Loader, Dimmer, Header, Grid } from 'semantic-ui-react';
 import * as userActions from '../../actions/user';
+import * as postActions from '../../actions/post';
 import User from '../../components/user/User';
 
 class UserListPageContainer extends Component {
@@ -12,7 +13,6 @@ class UserListPageContainer extends Component {
 
   render() {
     const { users, isLoading } = this.props;
-    console.log(this.props)
     return (
       <>
         {users.length === 0 || isLoading ?
@@ -48,7 +48,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    User: bindActionCreators(userActions, dispatch)
+    User: bindActionCreators(userActions, dispatch),
+    Post: bindActionCreators(postActions, dispatch)
   }
 }
 
