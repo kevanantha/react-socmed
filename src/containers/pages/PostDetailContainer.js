@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Loader, Dimmer, Container, Header, Grid } from 'semantic-ui-react';
+import { Loader, Dimmer, Container, Header } from 'semantic-ui-react';
 import * as postActions from '../../actions/post';
 
 class PostDetailContainer extends Component {
   componentDidMount() {
-    this.props.Post.loadPostByUserId(this.props.match.params.postId)
+    this.props.Post.loadPostByUserId(this.props.match.params.postId);
   }
 
   render() {

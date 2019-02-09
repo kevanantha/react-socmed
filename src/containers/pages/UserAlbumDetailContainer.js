@@ -3,37 +3,34 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Loader, Dimmer, Header, Grid } from 'semantic-ui-react';
 import * as userActions from '../../actions/user';
-import * as postActions from '../../actions/post';
 import * as albumActions from '../../actions/album';
-import UserPosts from '../../components/user/UserPosts';
-// album
-// albm
+import UserAlbums from '../../components/user/UserAlbums';
 
-class UserDetailContainer extends Component {
+class UserAlbumDetailContainer extends Component {
   componentDidMount() {
-    this.props.Post.loadAllPostByUserId(this.props.match.params.id);
-    this.props.User.loadUserById(this.props.match.params.id);
+    this.props.Album.loadAllAlbumByUserId(this.props.match.params.userId);
+    this.props.User.loadUserById(this.props.match.params.userId);
   }
 
   render() {
-    const { posts, isLoadingPosts, isLoadingUsers } = this.props;
+    const { albums, isLoadingAlbums, isLoadingUsers } = this.props;
     const { user={} } = this.props;
     const { name } = user;
 
     return (
       <>
-        {isLoadingUsers || isLoadingPosts || posts.length === 0 || user.length === 0 || posts === undefined ?
+        {isLoadingUsers || isLoadingAlbums || albums.length === 0 || user.length === 0 || albums === undefined ?
           <Dimmer active inverted>
             <Loader size='huge'>Loading...</Loader>
           </Dimmer>
         :
           <>
-            {name && <Header as='h1' textAlign='center' style={{ marginBottom: 50 }}>Posts of {name}</Header>}
+            {name && <Header as='h1' textAlign='center' style={{ marginBottom: 50 }}>Albums of {name}</Header>}
             <Grid columns={2} container>
               <Grid.Row>
-                {posts.map(post => (
-                  <Grid.Column key={post.id} style={{ marginBottom: 20 }}>
-                    <UserPosts post={post} />
+                {albums.map(album => (
+                  <Grid.Column key={album.id} style={{ marginBottom: 20 }}>
+                    <UserAlbums album={album} />
                   </Grid.Column>
                 ))}
               </Grid.Row>
@@ -46,11 +43,11 @@ class UserDetailContainer extends Component {
 }
 
 const mapStateToProps = state => {
-  const { posts, isLoading: isLoadingPosts } = state.posts;
+  const { albums, isLoading: isLoadingAlbums } = state.albums;
   const { user, isLoading: isLoadingUsers } = state.users;
   return {
-    posts,
-    isLoadingPosts,
+    albums,
+    isLoadingAlbums,
     user,
     isLoadingUsers
   };
@@ -59,9 +56,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     User: bindActionCreators(userActions, dispatch),
-    Post: bindActionCreators(postActions, dispatch),
     Album: bindActionCreators(albumActions, dispatch)
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(UserDetailContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(UserAlbumDetailContainer);

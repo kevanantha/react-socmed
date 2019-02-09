@@ -6,6 +6,8 @@ import { Container } from 'semantic-ui-react';
 import AppContainer from './containers/AppContainer';
 import UserDetailContainer from './containers/pages/UserDetailContainer';
 import PostDetailContainer from './containers/pages/PostDetailContainer';
+import UserAlbumDetailContainer from './containers/pages/UserAlbumDetailContainer';
+import AlbumDetailContainer from './containers/pages/AlbumDetailContainer';
 
 class App extends Component {
   render() {
@@ -18,6 +20,8 @@ class App extends Component {
               <Route exact path="/" component={AppContainer} />
               <Route exact path="/users/:id/posts" component={UserDetailContainer} />
               <Route exact path="/users/:userId/posts/:postId" component={PostDetailContainer} />
+              <Route exact path="/users/:userId/albums" component={UserAlbumDetailContainer} />
+              <Route exact path="/users/:userId/albums/:albumId/photos" component={AlbumDetailContainer} />
             </Switch>
           </Container>
         </>

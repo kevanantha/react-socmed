@@ -55,8 +55,10 @@ const User = (props) => {
           </Link>
 				</Button>
 				<Button animated='fade'>
-          <Button.Content visible>1 album</Button.Content>
-          <Button.Content hidden>View All Album</Button.Content>
+          <Link to={`/users/${id}/albums`}>
+            <Button.Content visible>1 album</Button.Content>
+            <Button.Content hidden>View All Album</Button.Content>
+          </Link>
 				</Button>
 			</div>
     </Card.Content>
