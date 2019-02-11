@@ -15,17 +15,16 @@ class UserAlbumDetailContainer extends Component {
   render() {
     const { albums, isLoadingAlbums, isLoadingUsers } = this.props;
     const { user={} } = this.props;
-    const { name } = user;
 
     return (
       <>
-        {isLoadingUsers || isLoadingAlbums || albums.length === 0 || user.length === 0 || albums === undefined ?
+        {isLoadingUsers || isLoadingAlbums || !albums || !user ?
           <Dimmer active inverted>
             <Loader size='huge'>Loading...</Loader>
           </Dimmer>
         :
           <>
-            {name && <Header as='h1' textAlign='center' style={{ marginBottom: 50 }}>Albums of {name}</Header>}
+            {user.name && <Header as='h1' textAlign='center' style={{ marginBottom: 50 }}>Albums of {user.name}</Header>}
             <Grid columns={2} container>
               <Grid.Row>
                 {albums.map(album => (

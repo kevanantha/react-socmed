@@ -1,49 +1,43 @@
 import React, { Component } from 'react';
-import { Dropdown, Menu, Button } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
 
 class Navbar extends Component {
-  state = { activeItem: 'home' }
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeItem: 'home',
+      modalOpen: false
+    };
 
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
+    this.onAddPost = () => {
+      this.setState({ modalOpen: true });
+    };
+
+    this.onCancelPost = () => {
+      this.setState({ modalOpen: false });
+    };
+
+    this.onCommitAddPost = values => {
+      return this.props.Post.create(values).then(res => {
+        this.onCancelPost();
+        alert('post created');
+      });
+    };
+  }
 
   render() {
-    const { activeItem } = this.state
+    const { activeItem } = this.state;
 
     return (
-      <Menu size='large'>
+      <Menu size="large">
         <NavLink to={'/'}>
           <Menu.Item
-            color='blue'
-            name='home'
+            color="blue"
+            name="home"
             active={activeItem === 'home'}
-            /* onClick={() => ( */
-            /*   <NavLink to={'/'}></NavLink> */
-            /* )} */
           />
         </NavLink>
-        {/*<NavLink to={'/top-songs-id'}>
-          <Menu.Item
-            color='blue'
-            name='top_15_indonesia'
-            active={activeItem === 'top_15_indonesia'}
-            onClick={this.handleItemClick}
-          />
-        </NavLink>*/}
-
-        <Menu.Menu position='right'>
-          <Dropdown item text='Language'>
-            <Dropdown.Menu>
-              <Dropdown.Item>English</Dropdown.Item>
-              <Dropdown.Item>Indonesian</Dropdown.Item>
-              <Dropdown.Item>Spanish</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
-
-          <Menu.Item>
-            <Button primary>Sign In</Button>
-          </Menu.Item>
-        </Menu.Menu>
       </Menu>
     )
   }

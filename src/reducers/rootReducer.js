@@ -4,11 +4,13 @@ import usersReducer from './usersReducer';
 import postsReducer from './postsReducer';
 import albumsReducer from './albumsReducer';
 import photosReducer from './photosReducer';
+import commentsReducer from './commentsReducer';
 
 export default combineReducers({
   form,
   users: usersReducer,
   posts: postsReducer,
   albums: albumsReducer,
-  photos: photosReducer
+  photos: photosReducer,
+  comments: commentsReducer
 });

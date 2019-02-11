@@ -12,14 +12,6 @@ const photosReducer = (state = initState, action) => {
     return { ...state, isLoading: false, photos };
   }
 
-  /* if (action.type === "PHOTO/LOAD_PHOTOS_BY_ALBUM_ID_PENDING") { */
-  /*   return { ...state, isLoading: true }; */
-  /* } */
-  /* if (action.type === "PHOTO/LOAD_PHOTOS_BY_ALBUM_ID_FULFILLED") { */
-  /*   const { payload: photos } = action; */
-  /*   return { ...state, isLoading: false, photos }; */
-  /* } */
-
   return state;
 }
 

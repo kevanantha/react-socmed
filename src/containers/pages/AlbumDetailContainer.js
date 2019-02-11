@@ -16,7 +16,7 @@ class AlbumDetailContainer extends Component {
     const { photos, isLoadingPhotos, user, isLoadingUsers } = this.props;
     return (
       <>
-        {isLoadingPhotos || !photos || isLoadingUsers || !user?
+        {isLoadingPhotos || !photos || isLoadingUsers || !user ?
           <Dimmer active inverted>
             <Loader size='huge'>Loading...</Loader>
           </Dimmer>
