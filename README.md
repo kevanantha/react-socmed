@@ -12,6 +12,7 @@ Dashboard UI Front End with React & Redux + [fake json API](https://jsonplacehol
 
 - then, `yarn start` or `npm start`
 
+Or you can visit the [page]([bit.ly/kumparan-test]())
 
 Note: Since this application use fake json API, you can only update and delete from the existing API
 
@@ -20,4 +21,3 @@ Note: Since this application use fake json API, you can only update and delete f
 - This application includes unit test using Jest and Enzyme
 
   `yarn test` or `npm test`
-
