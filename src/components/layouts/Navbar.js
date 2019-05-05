@@ -31,7 +31,7 @@ class Navbar extends Component {
 
     return (
       <Menu size="large">
-        <NavLink to={'/'}>
+        <NavLink to={'/react-socmed'}>
           <Menu.Item
             color="blue"
             name="home"
