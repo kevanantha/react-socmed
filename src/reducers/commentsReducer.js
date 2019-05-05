@@ -17,26 +17,27 @@ const commentsReducer = (state = initState, action) => {
   if (action.type === "COMMENT/CREATE_FULFILLED") {
     const { data: comment } = action.payload;
     let comments = [ ...state.comments, comment ];
-    return { ...state, isLoading: false, comments }
+    return { ...state, isLoading: false, comments };
   }
 
   if (action.type === "COMMENT/UPDATE_FULFILLED") {
     const { data: comment } = action.payload;
-    let { comments } = { ...state }
+    let { comments } = { ...state };
     const removedOldData = _.remove(comments, (n) => {
       return n.id !== comment.id;
     });
     let newComments = [ ...removedOldData, comment ];
-    return { ...state, isLoading: false, comments: newComments }
+    return { ...state, isLoading: false, comments: newComments };
   }
 
   if (action.type === "COMMENT/DELETE_FULFILLED") {
     const { comment: metaComment } = action.meta;
-    let { comments } = { ...state }
-    const deletedData = _.remove(comments, (n) => {
-      return n.id !== metaComment.id
-    });
-    return { ...state, isLoading: false, comments: deletedData }
+    let { comments } = { ...state };
+    /* const deletedData = _.remove(comments, (n) => { */
+    /*   return n.id !== metaComment.id */
+    /* }); */
+    const newComments = comments.filter(comment => comment.id !== metaComment.id);
+    return { ...state, isLoading: false, comments: newComments };
   }
 
   return state;

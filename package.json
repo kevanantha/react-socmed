@@ -2,6 +2,7 @@
   "name": "react-socmed",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kevanantha.github.io/react-socmed",
   "dependencies": {
     "axios": "^0.18.0",
     "lodash": "^4.17.11",
@@ -18,6 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -33,6 +36,7 @@
   ],
   "devDependencies": {
     "enzyme": "^3.8.0",
-    "enzyme-adapter-react-16": "^1.9.1"
+    "enzyme-adapter-react-16": "^1.9.1",
+    "gh-pages": "^2.0.1"
   }
 }

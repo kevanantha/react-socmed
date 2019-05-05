@@ -17,7 +17,7 @@ class App extends Component {
           <Navbar />
           <Container style={{ marginTop: "5em"}}>
             <Switch>
-              <Route exact path="/" component={UserListPageContainer} />
+              <Route exact path="/react-socmed" component={UserListPageContainer} />
               <Route exact path="/users/:userId/posts" component={UserPostDetailContainer} />
               <Route exact path="/users/:userId/posts/:postId" component={PostDetailContainer} />
               <Route exact path="/users/:userId/albums" component={UserAlbumDetailContainer} />
