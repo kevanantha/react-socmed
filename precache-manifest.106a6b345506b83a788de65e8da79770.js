@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/react-socmed/static/js/runtime~main.a82e2672.js"
   },
   {
-    "revision": "e13d9e15073168e780e9",
-    "url": "/react-socmed/static/js/main.e13d9e15.chunk.js"
+    "revision": "35ef24ff771e18075f70",
+    "url": "/react-socmed/static/js/main.35ef24ff.chunk.js"
   },
   {
     "revision": "7add1642de0c7e56f139",
     "url": "/react-socmed/static/js/1.7add1642.chunk.js"
   },
   {
-    "revision": "6ffa7f1490018797a3cb0b467c412a77",
+    "revision": "069a64c74d055bfe4cc2eff7267e8269",
     "url": "/react-socmed/index.html"
   }
 ];
