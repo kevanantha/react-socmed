@@ -18,10 +18,10 @@ class App extends Component {
           <Container style={{ marginTop: "5em"}}>
             <Switch>
               <Route exact path="/react-socmed" component={UserListPageContainer} />
-              <Route exact path="/users/:userId/posts" component={UserPostDetailContainer} />
-              <Route exact path="/users/:userId/posts/:postId" component={PostDetailContainer} />
-              <Route exact path="/users/:userId/albums" component={UserAlbumDetailContainer} />
-              <Route exact path="/users/:userId/albums/:albumId/photos" component={AlbumDetailContainer} />
+              <Route path="/users/:userId/posts" component={UserPostDetailContainer} />
+              <Route  path="/users/:userId/posts/:postId" component={PostDetailContainer} />
+              <Route  path="/users/:userId/albums" component={UserAlbumDetailContainer} />
+              <Route  path="/users/:userId/albums/:albumId/photos" component={AlbumDetailContainer} />
             </Switch>
           </Container>
         </>
