@@ -1,11 +1,11 @@
 {
-  "main.js": "/qumparantest/static/js/main.b26aecf9.chunk.js",
-  "main.js.map": "/qumparantest/static/js/main.b26aecf9.chunk.js.map",
-  "static/js/1.532220ba.chunk.js": "/qumparantest/static/js/1.532220ba.chunk.js",
-  "static/js/1.532220ba.chunk.js.map": "/qumparantest/static/js/1.532220ba.chunk.js.map",
-  "runtime~main.js": "/qumparantest/static/js/runtime~main.a67c0788.js",
-  "runtime~main.js.map": "/qumparantest/static/js/runtime~main.a67c0788.js.map",
-  "index.html": "/qumparantest/index.html",
-  "precache-manifest.4b59da67c49aecab331525a3b51ad74c.js": "/qumparantest/precache-manifest.4b59da67c49aecab331525a3b51ad74c.js",
-  "service-worker.js": "/qumparantest/service-worker.js"
+  "main.js": "/react-socmed/static/js/main.b26aecf9.chunk.js",
+  "main.js.map": "/react-socmed/static/js/main.b26aecf9.chunk.js.map",
+  "static/js/1.dd468ee6.chunk.js": "/react-socmed/static/js/1.dd468ee6.chunk.js",
+  "static/js/1.dd468ee6.chunk.js.map": "/react-socmed/static/js/1.dd468ee6.chunk.js.map",
+  "runtime~main.js": "/react-socmed/static/js/runtime~main.a82e2672.js",
+  "runtime~main.js.map": "/react-socmed/static/js/runtime~main.a82e2672.js.map",
+  "index.html": "/react-socmed/index.html",
+  "precache-manifest.71e32b8f52c305fee47cae3b7ca4c19e.js": "/react-socmed/precache-manifest.71e32b8f52c305fee47cae3b7ca4c19e.js",
+  "service-worker.js": "/react-socmed/service-worker.js"
 }
