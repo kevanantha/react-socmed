@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://kevanantha.github.io/react-socmed",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.0",
     "lodash": "^4.17.11",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
