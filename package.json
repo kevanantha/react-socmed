@@ -37,6 +37,6 @@
   "devDependencies": {
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.9.1",
-    "gh-pages": "^2.0.1"
+    "gh-pages": "2.2.0"
   }
 }
